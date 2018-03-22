@@ -112,12 +112,14 @@ LANGUAGE_CODE = 'zh-hans'  # 'en-us'
 
 TIME_ZONE = 'Asia/Shanghai'
 
-USE_I18N = True
+USE_I18N = False
+# 是否开启国际化支持，不开启时可以不加载翻译模块优化性能
 
 USE_L10N = True
+# 本地化格式支持，开启时使用系统locale设置来显示数字、时间等格式
 
 USE_TZ = True
-
+# 是否开启etag，开启时可以降低网络资源开销，但会增加服务器性能开销
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/

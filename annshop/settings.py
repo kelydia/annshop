@@ -122,9 +122,23 @@ USE_L10N = True
 # 本地化格式支持，开启时使用系统locale设置来显示数字、时间等格式
 
 USE_TZ = True
+
+USE_ETAGS = False
 # 是否开启etag，开启时可以降低网络资源开销，但会增加服务器性能开销
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-
+# 在给定的路径中寻找静态资源
+STATICFILES_DIRS = (os.path.join(SETTINGS_DIR, 'static'))
 STATIC_URL = '/static/'
+
+# 用户上传文件的位置
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+# 站点设置
+SITE_NAME = '安购'
+META_KEYWORDS = '安购，安心购，新鲜水果，新鲜蔬菜，双十一特惠'
+META_DESCRIPTION = '''安购 - 西昌最大、最安全的新鲜果蔬网上交易平台，提供各类水果、蔬菜。
+    2万优质特价商品，同时提供担保交易（先收货后付款），先行赔付、假一赔三、免费送货上门，
+    让你全面安心享受网上购物乐趣！'''
